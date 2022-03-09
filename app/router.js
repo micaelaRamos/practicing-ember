@@ -11,4 +11,5 @@ Router.map(function () {
     this.route('new');
   });
   this.route('task', { path: '/task/:task_id' });
+  this.route('not-found', { path: '/*path'});
 });
