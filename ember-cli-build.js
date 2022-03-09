@@ -7,7 +7,5 @@ module.exports = function (defaults) {
     // Add options here
   });
 
-  app.import('bower_components/bootstrap/dist/css/bootstrap.css');
-
   return app.toTree();
 };
