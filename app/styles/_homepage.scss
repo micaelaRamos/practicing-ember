@@ -1,4 +1,4 @@
-.new-task-link {
+.cart-link {
   position: fixed;
   right: 32px;
   bottom: 32px;
@@ -18,5 +18,9 @@
   &:hover {
     -webkit-box-shadow: 6px 7px 15px 1px rgba(0,0,0,0.27); 
     box-shadow: 6px 7px 15px 1px rgba(0,0,0,0.27);
+  }
+
+  .icon {
+    font-size: 24px;
   }
 }

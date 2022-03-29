@@ -1,10 +1,7 @@
-{{page-title "Tasks manager"}}
-
-<LinkTo @route="new-task" class="new-task-link">
-  <i class="fa-solid fa-plus"></i>
+<LinkTo @route="cart" class="cart-link">
+    <i class="fa fa-shopping-cart icon"></i>
 </LinkTo>
 <main class="container mt-5">
-  <LinkTo @route="task" @model="1">Task 1</LinkTo>
-  <LinkTo @route="task" @model="2">Task 2</LinkTo>
+    <LinkTo @route="item" @model="1">Product 1</LinkTo>
+    <LinkTo @route="item" @model="2">Product 2</LinkTo>
 </main>
-{{outlet}}
