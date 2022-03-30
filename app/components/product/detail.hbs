@@ -14,18 +14,20 @@
 
   {{!-- Price --}}
   <section>
-    <del class="small text-black-50">${{@price.original}}</del>
-    <i class="text-danger font-weight-bold">${{@price.current}}</i>
+    <del class="small text-black-50">{{currency @price.original sign="$"}}</del>
+    <i class="text-danger font-weight-bold">{{currency @price.current}}</i> {{!-- Using default hash value --}}
   </section>
 
-  {{#if @isDetails}}
-  <div>
-    <h5>Color</h5>
-    <div class="product-colors active-{{@color}}">
-      {{#each @colors as |currColor|}}
-        <div class="product-color color-{{currColor.color}}" {{on "click" (fn @onChangeColor currColor.color)}}></div>
-      {{/each}}
-    </div>
-  </div>
+  {{#if @isDetail}}
+    {{#if @colors}}
+      <div>
+        <h5>Color</h5>
+        <div class="product-colors active-{{@color}}">
+          {{#each @colors as |currColor|}}
+            <div class="product-color color-{{currColor.color}}" {{on "click" (fn @onChangeColor currColor.color)}}></div>
+          {{/each}}
+        </div>
+      </div>
+    {{/if}}
   {{/if}}
 </div>
