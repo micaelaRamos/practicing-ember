@@ -1,8 +1,8 @@
 {{page-title "Item"}}
 <GeneralContainer>
   <div class="product item-detail-page">
-    <Product::Image @color={{this.color}} />
-    <Product::Detail @color={{this.color}} />
+    <Product::Image @src={{this.productImage}} />
+    <Product::Detail @color={{this.color}} @onChangeColor={{this.onChangeColor}} />
   </div>
   <h5 class="mt-5">Features</h5>
   <ul>
