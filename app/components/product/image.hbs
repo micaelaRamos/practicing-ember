@@ -1,3 +1,5 @@
 <div class="product-image">
-    <img alt="product" src={{@src}}>
+    {{#if @src}}
+    <img alt="product-{{@itemId}}" src={{@src}}>
+    {{/if}}
 </div>
