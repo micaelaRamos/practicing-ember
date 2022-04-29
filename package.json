@@ -68,5 +68,8 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "ember-cli-favicon": "^3.0.0"
   }
 }
