@@ -9,12 +9,22 @@
         </li>
         <li class="breadcrumb-item">Shopping Cart</li>
     </ol>
+    <div class="items-list">
+        {{#each this.shoppingCart.itemList as |item|}}
+            <div class="cart-item d-flex align-items-center">
+                <div class="cart-item-thumbnail">
+                    <img src={{item.image}} alt="">
+                </div>
+                <div class="ml-3">
+                    <h4>{{item.name}}</h4>
+                    <i class="font-weight-bold">{{currency item.price}}</i>
+                </div>
+                <input type="number" class="ml-auto" value={{item.count}} {{on "input" (fn this.updateItemCount item)}}>
+            </div>
+        {{/each}}
+    </div>
 
-    {{#each this.shoppingCart.itemList as |item|}}
-    <span>{{item.name}}</span>
-    {{/each}}
-
-    <section class="w-50 ml-auto text-right mb-5">
+    <section class="ml-auto text-right mb-5 checkout">
         <div class="row">
             <span class="col">Subtotal</span>
             <span class="col">{{currency this.subtotal sign="$"}}</span>
@@ -27,7 +37,6 @@
             <span class="col">Total</span>
             <span class="col">{{currency this.total sign="$"}}</span>
         </div>
+        <button type="button" class="btn btn-success checkout-button">Check out</button>
     </section>
-
-    <button type="button" class="btn btn-success float-right">Check out</button>
 </main>
