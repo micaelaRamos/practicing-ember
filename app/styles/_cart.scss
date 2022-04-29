@@ -1,7 +1,8 @@
 .items-list {
     width: 100%;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     .cart-item {
         padding: 8px 20px;
@@ -21,6 +22,11 @@
             max-height: 150px;
             height: 100%;
             width: 100%;
+        }
+
+        input {
+            width: 8%;
+            padding: 4px;
         }
     }
 }

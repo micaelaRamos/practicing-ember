@@ -24,7 +24,6 @@ export default class ShoppingCartService extends Service {
 
     addItem(item) {
         const existingItem = this.itemList.find(({ name, color}) => {
-          debugger;
           return name === item.name && color === item.color;
         });
     

@@ -6,8 +6,8 @@ export default class CartController extends Controller {
     @service shoppingCart;
     
     get subtotal() {
-        return this.model.items.reduce((accumulator, item) => {
-            return accumulator + item.price;
+        return this.shoppingCart.itemList.reduce((accumulator, item) => {
+            return accumulator + (item.price * item.count);
           }, 0);
     };
     get tax() {
