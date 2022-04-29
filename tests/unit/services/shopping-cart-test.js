@@ -7,6 +7,14 @@ module('Unit | Service | shopping-cart', function(hooks) {
   // TODO: Replace this with your real tests.
   test('it exists', function(assert) {
     let service = this.owner.lookup('service:shopping-cart');
-    assert.ok(service);
+    assert.ok(service, 'Service exists');
+  });
+
+  test('Add items works', function(assert) {
+    let service = this.owner.lookup('service:shopping-cart');
+    assert.equal(service.itemList.length, 0, 'Item list is empty');
+
+    service.addItem({});
+    assert.equal(service.itemList.length, 1);
   });
 });
