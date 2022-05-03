@@ -1,4 +1,4 @@
-<div class="product-image" {{on "click" @toggleZoom}}>
+<div class="product-image" {{on "click" this.toggleZoom}}>
     {{#if @src}}
     <img alt="product-{{@itemId}}" src={{@src}}>
     {{/if}}

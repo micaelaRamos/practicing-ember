@@ -1,7 +1,7 @@
-<LinkTo @route="cart" class="cart-link">
+<LinkTo data-test-cart-button @route="cart" class="cart-link">
     <i class="fa fa-shopping-cart icon"></i>
     {{#if this.itemCount}}
-        <span class="shopping-cart__badge">{{this.itemCount}}</span>
+        <span class="shopping-cart__badge" data-test-cart-count>{{this.itemCount}}</span>
     {{/if}}
 </LinkTo>
 <main class="container mt-5">
